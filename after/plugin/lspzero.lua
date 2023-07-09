@@ -27,7 +27,6 @@ lsp.ensure_installed({
 	'gopls',
 	'tsserver',
 	'lua_ls',
-	'nimls',
 	'pyright',
 	'rust_analyzer'
 })
