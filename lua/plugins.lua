@@ -43,6 +43,9 @@ function(use)
 	  }
 	}
 
+    -- Nim syntax for treesitter:
+    use 'zah/nim.vim'
+
 	-----------------------------------------------------------------------
 	-- Themeing and Colors
 	use ({
@@ -53,7 +56,7 @@ function(use)
 		end
 	})
 
-	-- Airline and themes
+	-- Airline themes
 	use ('sonph/onehalf')
 	use ('vim-airline/vim-airline')
 	use ({

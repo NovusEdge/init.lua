@@ -8,7 +8,7 @@ require('nightfox').setup({
     module_default = true,   -- Default enable value for modules
     styles = {               -- Style to be applied to different syntax groups
       comments = "italic",     -- Value is any valid attr-list value `:help attr-list`
-      constants = "NONE",
+      constants = "bold",
       functions = "NONE",
       keywords = "NONE",
       numbers = "NONE",
