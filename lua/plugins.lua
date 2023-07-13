@@ -5,7 +5,7 @@ return require('packer').startup(
 
 function(use)
   -- Packer can manage itself
-	use 'wbthomason/packer.nvim'
+	use ('wbthomason/packer.nvim')
 
 	use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.2',
@@ -20,6 +20,7 @@ function(use)
 
 	-- The beloved NerdTree
 	use ('scrooloose/nerdtree')
+    use ('ryanoasis/vim-devicons')
 	-----------------------------------------------------------------------
 	-- LSP
 	use {
@@ -44,7 +45,7 @@ function(use)
 	}
 
     -- Nim syntax for treesitter:
-    use 'zah/nim.vim'
+    use ('zah/nim.vim')
 
 	-----------------------------------------------------------------------
 	-- Themeing and Colors
