@@ -12,8 +12,9 @@ function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	-- Treesitter!
-	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdadte'})
-	use ('nvim-treesitter/playground')
+	use {
+        'nvim-treesitter/nvim-treesitter', tag = 'v0.8.5.2',
+    }
 
 	use ('nvim-lua/plenary.nvim')
 	-- use ('ThePrimeagen/harpoon') -- Gonna try this sometime >.>
@@ -46,7 +47,8 @@ function(use)
 
     -- Nim syntax for treesitter:
     use ('zah/nim.vim')
-
+    -- Github Copilot:
+    use ('github/copilot.vim')
 	-----------------------------------------------------------------------
 	-- Themeing and Colors
 	use ({
