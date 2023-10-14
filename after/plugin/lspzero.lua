@@ -32,7 +32,6 @@ lsp.ensure_installed({
 })
 
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
-
 lsp.setup()
 
 local has_words_before = function()
@@ -47,7 +46,7 @@ local cmp = require('cmp')
 cmp.setup({
     mapping = {
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
-        ['<Tab>'] = function(fallback)
+        ['<C-j>'] = function(fallback)
             if not cmp.select_next_item() then
                 if vim.bo.buftype ~= 'prompt' and has_words_before() then
                     cmp.complete()
@@ -57,7 +56,7 @@ cmp.setup({
                 end
             end,
 
-        ['<S-Tab>'] = function(fallback)
+        ['<C-k>'] = function(fallback)
             if not cmp.select_prev_item() then
                 if vim.bo.buftype ~= 'prompt' and has_words_before() then
                    cmp.complete()
@@ -67,4 +66,6 @@ cmp.setup({
             end
         end,
         },
+
+        ['<C-S-Q>'] = cmp.mapping.close(),
 })
